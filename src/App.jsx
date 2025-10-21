@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <div className="ResultBoard">
-        <h1>1</h1>
+        <h1>2</h1>
         <h1>vs</h1>
         <h1>1</h1>
       </div>
