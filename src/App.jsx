@@ -31,9 +31,9 @@ function App() {
   return (
     <div className="App">
       <div className="ResultBoard">
-        <h1>0</h1>
+        <h1>1</h1>
         <h1>vs</h1>
-        <h1>0</h1>
+        <h1>1</h1>
       </div>
 
       <div className="Container">
