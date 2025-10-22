@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Box from './component/Box';
 import { GiRock } from "react-icons/gi";
-import { FaHandPaper, FaHandScissors, FaRobot, FaUserTie } from "react-icons/fa";
+import { FaCrown, FaHandPaper, FaHandScissors, FaRobot, FaUserTie } from "react-icons/fa";
 
 const choice = {
   rock: {
@@ -71,9 +71,9 @@ function App() {
     <div className="App">
       <h2>경기 수: {count} | 비김: {count - userWinCount - computerWinCount}</h2>
       <div className="ResultBoard">
-        <h2><FaUserTie /> | {userWinCount}</h2>
+        <h2><FaUserTie /> | {userWinCount}{userWinCount > computerWinCount ? <FaCrown /> : ""}</h2>
         <h2>vs</h2>
-        <h2>{computerWinCount} | <FaRobot /></h2>
+        <h2>{computerWinCount}{userWinCount < computerWinCount ? <FaCrown /> : ""} | <FaRobot /></h2>
       </div>
 
       <div className="Container">
