@@ -71,9 +71,9 @@ function App() {
     <div className="App">
       <h2>경기 수: {count} | 비김: {count - userWinCount - computerWinCount}</h2>
       <div className="ResultBoard">
-        <h2><FaUserTie /> | {userWinCount}{userWinCount > computerWinCount ? <FaCrown /> : ""}</h2>
+        <h2>{userWinCount > computerWinCount ? <FaCrown color='gold'/> : ""} <FaUserTie /> | {userWinCount}</h2>
         <h2>vs</h2>
-        <h2>{computerWinCount}{userWinCount < computerWinCount ? <FaCrown /> : ""} | <FaRobot /></h2>
+        <h2>{computerWinCount} | <FaRobot /> {userWinCount < computerWinCount ? <FaCrown color='gold'/> : ""}</h2>
       </div>
 
       <div className="Container">
