@@ -1,30 +1,21 @@
 // MysteryBoxIcon.jsx
-import React, { useState } from "react";
-import { FaBoxOpen, FaBox, FaQuestion } from "react-icons/fa";
+import React from "react";
+import { FaBoxOpen, FaQuestion } from "react-icons/fa";
 
 const MysteryBoxIcon = ({ size = 80, color = "#6c63ff" }) => {
-  const [hovered, setHovered] = useState(false);
-
   return (
     <div
       style={{
         position: "relative",
         display: "inline-block",
         cursor: "pointer",
-        transition: "transform 0.3s ease",
-        transform: hovered ? "translateY(-5px)" : "translateY(0)",
+        transform: "translateY(0)",
       }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
     >
-      {/* 박스 아이콘 */}
-      {hovered ? (
-        <FaBoxOpen size={size} color={color} />
-      ) : (
-        <FaBox size={size} color={color} />
-      )}
+      {/* 열린 박스 아이콘 (항상 열려 있음) */}
+      <FaBoxOpen size={size} color={color} />
 
-      {/* 물음표 아이콘 */}
+      {/* 흔들리는 물음표 아이콘 */}
       <FaQuestion
         size={size / 2.2}
         color="gold"
@@ -34,7 +25,7 @@ const MysteryBoxIcon = ({ size = 80, color = "#6c63ff" }) => {
           left: "50%",
           transform: "translate(-50%, -50%)",
           textShadow: "0 0 8px rgba(0,0,0,0.3)",
-          animation: hovered ? "shake 0.6s ease infinite" : "none",
+          animation: "shake 0.8s ease-in-out infinite",
         }}
       />
 
